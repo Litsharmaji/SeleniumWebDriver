@@ -1,0 +1,260 @@
+{
+  "id": "eb2ff085-d997-426e-ad89-5848d5844269",
+  "version": "2.0",
+  "name": "Aut",
+  "url": "http://automationpractice.com",
+  "tests": [{
+    "id": "32f83c82-a7a3-4877-823b-05c4171f42f1",
+    "name": "Automation Practice",
+    "commands": [{
+      "id": "23db56e9-9c98-4b09-88e0-1490c30d2236",
+      "comment": "",
+      "command": "open",
+      "target": "/index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8824079b-ebae-4279-b408-79339c5f7e06",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83f86b86-badb-44e8-91bc-9969a0e2ef8f",
+      "comment": "",
+      "command": "click",
+      "target": "id=search_query_top",
+      "targets": [
+        ["id=search_query_top", "id"],
+        ["name=search_query", "name"],
+        ["css=#search_query_top", "css:finder"],
+        ["xpath=//input[@id='search_query_top']", "xpath:attributes"],
+        ["xpath=//form[@id='searchbox']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7da84f6b-90ee-4f01-a337-6b3fe3db5bbb",
+      "comment": "",
+      "command": "type",
+      "target": "id=search_query_top",
+      "targets": [
+        ["id=search_query_top", "id"],
+        ["name=search_query", "name"],
+        ["css=#search_query_top", "css:finder"],
+        ["xpath=//input[@id='search_query_top']", "xpath:attributes"],
+        ["xpath=//form[@id='searchbox']/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "t-shirt"
+    }, {
+      "id": "c9d2d77a-dc84-45c3-ab85-1f434a206bff",
+      "comment": "",
+      "command": "click",
+      "target": "name=submit_search",
+      "targets": [
+        ["name=submit_search", "name"],
+        ["css=.button-search", "css:finder"],
+        ["xpath=//button[@name='submit_search']", "xpath:attributes"],
+        ["xpath=//form[@id='searchbox']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d73b76bb-50b4-4a4e-bc98-7f8e506efb51",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product_img_link > .replace-2x",
+      "targets": [
+        ["css=.product_img_link > .replace-2x", "css:finder"],
+        ["xpath=//img[@alt='Faded Short Sleeve T-shirts']", "xpath:img"],
+        ["xpath=//div[@id='center_column']/ul/li/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//li/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2db01a1-6dff-4b13-9434-eadfb7db87de",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Faded Short Sleeve T-shirts - My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e40d242-61d0-478f-938e-17e601dd856d",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//h1[@itemprop='name']",
+      "targets": [],
+      "value": "Faded Short Sleeve T-shirts"
+    }, {
+      "id": "d3e01632-ce4a-4f1e-a48b-5977b99dad90",
+      "comment": "",
+      "command": "select",
+      "target": "id=group_1",
+      "targets": [],
+      "value": "label=L"
+    }, {
+      "id": "dcad876a-ff90-4e17-976e-990cff1f9bbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=option:nth-child(3)",
+      "targets": [
+        ["css=option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='3']", "xpath:attributes"],
+        ["xpath=//select[@id='group_1']/option[3]", "xpath:idRelative"],
+        ["xpath=//option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'L')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43f9a707-3cfc-49eb-aa4e-c03d1cbbc798",
+      "comment": "",
+      "command": "click",
+      "target": "id=color_14",
+      "targets": [
+        ["id=color_14", "id"],
+        ["name=Blue", "name"],
+        ["css=#color_14", "css:finder"],
+        ["xpath=//a[@id='color_14']", "xpath:attributes"],
+        ["xpath=//ul[@id='color_to_pick_list']/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[@href='http://automationpractice.com/index.php?id_product=1&controller=product'])[3]", "xpath:href"],
+        ["xpath=//fieldset[2]/div/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "187f7694-29e1-4aaa-847e-c1cf5d970c4f",
+      "comment": "",
+      "command": "storeText",
+      "target": "//span[@id='our_price_display']",
+      "targets": [],
+      "value": "price"
+    }, {
+      "id": "33301209-06f7-46e8-9f80-63344367154c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${price}.includes(\"$\")",
+      "targets": [],
+      "value": "currency"
+    }, {
+      "id": "6063b606-0b43-4b6b-94a3-0dbb9724d5ea",
+      "comment": "",
+      "command": "if",
+      "target": "${currency}==true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2049f5d9-23ff-4b70-8fd9-3d2c43e06964",
+      "comment": "",
+      "command": "echo",
+      "target": "the price of Faded Short Sleeve T-shirts is: ${price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "753454ab-cd72-4280-b6c9-378ab83be761",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23eaf43b-90f4-4088-9600-3bad34800ae2",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=#short_description_content > p",
+      "targets": [
+        ["css=#short_description_content > p", "css:finder"],
+        ["xpath=//div[@id='short_description_content']/p", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/p", "xpath:position"]
+      ],
+      "value": "dis"
+    }, {
+      "id": "c0c3e33e-c1b1-4142-89eb-c5a975801571",
+      "comment": "",
+      "command": "echo",
+      "target": "discription :${dis}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc261d6f-2950-498a-a401-3cd16f32882e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.exclusive > span",
+      "targets": [
+        ["css=.exclusive > span", "css:finder"],
+        ["xpath=//p[@id='add_to_cart']/button/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/p/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46a95ef4-ce82-4899-b6d4-cd25ba4ff414",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//div[@id='layer_cart']//div[@class='clearfix']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f26d9cb-1a43-4422-85f2-a0ba1cf29054",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[4]/a/span",
+      "targets": [
+        ["css=.button-medium > span", "css:finder"],
+        ["xpath=//div[@id='layer_cart']/div/div[2]/div[4]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Proceed to checkout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fbf3dd6-dc56-4bf5-84e4-e363dfc32f67",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Order - My Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76dfeabe-1a55-429a-93b5-152d1b06e3a0",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//td[@class='cart_quantity text-center']//input[@type='text']",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "b483fe69-4f46-474c-b8e0-ff8f637b6516",
+      "comment": "",
+      "command": "click",
+      "target": "css=#cart_quantity_up_1_6_0_0 > span",
+      "targets": [
+        ["css=#cart_quantity_up_1_6_0_0 > span", "css:finder"],
+        ["xpath=//a[@id='cart_quantity_up_1_6_0_0']/span", "xpath:idRelative"],
+        ["xpath=//a[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e909cf9-836b-4361-9ad5-a1c735266cf9",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "//span[@class='label label-success']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4cdd1982-9b94-41f1-9dfa-eeb87bb55147",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "b4042482-7d2a-4e63-98ed-a2ba5de9adce",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["32f83c82-a7a3-4877-823b-05c4171f42f1"]
+  }],
+  "urls": ["http://automationpractice.com/"],
+  "plugins": []
+}

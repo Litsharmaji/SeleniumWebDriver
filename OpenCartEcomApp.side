@@ -1,0 +1,303 @@
+{
+  "id": "bc648c10-9d7f-45bd-9234-a8136c1c6a3a",
+  "version": "2.0",
+  "name": "OpenCartEcomApp",
+  "url": "https://demo.opencart.com",
+  "tests": [{
+    "id": "b5e64815-5dd2-4e81-861a-6303f9d65bf6",
+    "name": "AddProductToCard",
+    "commands": [{
+      "id": "a7860714-42f8-4990-ac2c-4a7d2733d8aa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9bf54efe-0b87-43a1-8ccc-5f6010a20590",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Your Store",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5208a26a-e984-45df-8150-15426199a9ff",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=iPhone",
+      "targets": [
+        ["linkText=iPhone", "linkText"],
+        ["css=.col:nth-child(2) .content a", "css:finder"],
+        ["xpath=//a[contains(text(),'iPhone')]", "xpath:link"],
+        ["xpath=//div[@id='content']/div[2]/div[2]/form/div/div[2]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://demo.opencart.com/index.php?route=product/product&language=en-gb&product_id=40')])[2]", "xpath:href"],
+        ["xpath=//div[2]/form/div/div[2]/div/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'iPhone')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0135d9a-b414-44da-90bc-5e0a00f38b85",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "iPhone",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71bd2e48-1258-48aa-b1da-6c62e7231ea3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light:nth-child(1)",
+      "targets": [
+        ["css=.btn-light:nth-child(1)", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div[2]/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e0aed8a-54f5-4d25-923f-33041024a37e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Cameras",
+      "targets": [
+        ["linkText=Cameras", "linkText"],
+        ["css=.nav-item:nth-child(7) > .nav-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Cameras')])[2]", "xpath:link"],
+        ["xpath=//div[@id='narbar-menu']/ul/li[7]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://demo.opencart.com/index.php?route=product/category&language=en-gb&path=33')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a53cabc8-6c3e-4f22-a225-c9226b21a151",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.col:nth-child(2) > form .img-fluid",
+      "targets": [
+        ["css=.col:nth-child(2) > form .img-fluid", "css:finder"],
+        ["xpath=//img[@alt='Nikon D300']", "xpath:img"],
+        ["xpath=//div[@id='product-list']/div[2]/form/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div/div/a/img", "xpath:position"]
+      ],
+      "value": "10000"
+    }, {
+      "id": "33c004ee-bde3-4f0b-a09a-4049bb8d5093",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Cameras",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a1968ba-d6c4-4f32-9f5e-aea8cab0ffc8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Nikon D300",
+      "targets": [
+        ["linkText=Nikon D300", "linkText"],
+        ["css=.col:nth-child(2) > form .content a", "css:finder"],
+        ["xpath=//a[contains(text(),'Nikon D300')]", "xpath:link"],
+        ["xpath=//div[@id='product-list']/div[2]/form/div/div[2]/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://demo.opencart.com/index.php?route=product/product&language=en-gb&path=33&product_id=31')])[2]", "xpath:href"],
+        ["xpath=//div[2]/form/div/div[2]/div/h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Nikon D300')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6620d3ab-f7f5-43dc-8043-29020f1f9566",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "Nikon D300",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64342a20-f462-4aba-881a-68835fe93f77",
+      "comment": "",
+      "command": "waitForText",
+      "target": "//li[contains(text(),'Availability: In Stock')]",
+      "targets": [],
+      "value": "Availability: In Stock"
+    }, {
+      "id": "239dd856-6721-4465-9835-2338478a6a72",
+      "comment": "",
+      "command": "assertText",
+      "target": "//li[contains(text(),'Availability: In Stock')]",
+      "targets": [],
+      "value": "Availability: In Stock"
+    }, {
+      "id": "15f66fb1-bb1c-46cf-bcd6-5c06a4ebb584",
+      "comment": "",
+      "command": "storeText",
+      "target": "//span[@class='price-new']",
+      "targets": [],
+      "value": "price"
+    }, {
+      "id": "542d850e-1f8c-4336-85ea-1a70c3d19c51",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${price}.includes(\"$\")",
+      "targets": [],
+      "value": "currency"
+    }, {
+      "id": "eb05936f-a850-4a60-a978-27316bff18f1",
+      "comment": "",
+      "command": "if",
+      "target": "${currency}==true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd61b1a9-45bc-4354-a990-ad42d15549b4",
+      "comment": "",
+      "command": "echo",
+      "target": "The Price is in dollars",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0da08aaa-9839-47e3-9a24-ff40a16b5361",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01949940-d623-4d5e-9a91-888c7dc50415",
+      "comment": "",
+      "command": "echo",
+      "target": "the price of Nikon D300 is: ${price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fc34084-6a4a-462d-896f-52474554d5f6",
+      "comment": "",
+      "command": "click",
+      "target": "id=button-cart",
+      "targets": [
+        ["id=button-cart", "id"],
+        ["css=#button-cart", "css:finder"],
+        ["xpath=//button[@id='button-cart']", "xpath:attributes"],
+        ["xpath=//form[@id='form-product']/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add to Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "401be654-d775-4784-a0d7-81a25d1ba167",
+      "comment": "",
+      "command": "close",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8cb3f491-0ba3-467e-926d-0367a7b973d2",
+    "name": "Register",
+    "commands": [{
+      "id": "3ef3a215-b3fa-427b-b72f-02dd3913f687",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59dc448d-736b-45d9-a99c-d1cefc932aba",
+      "comment": "",
+      "command": "click",
+      "target": "//span[contains(text(),'My Account')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d3ef9b2-540d-469b-a891-2955c4d864b8",
+      "comment": "",
+      "command": "click",
+      "target": "//a[contains(text(),'Register')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "124a899d-9503-462b-924a-a427d06de0b4",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='input-firstname']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d4b54e6-5b5a-42a7-b296-b61f2cde8924",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "//input[@id='input-firstname']",
+      "targets": [],
+      "value": "Happy"
+    }, {
+      "id": "45a84d31-825e-4ff2-b4ab-5dfa96a18ccf",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='input-lastname']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "766be13c-fc9a-4da6-9d2a-c1d44520962a",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='input-lastname']",
+      "targets": [],
+      "value": "Diwali"
+    }, {
+      "id": "eb4ef956-6d26-4223-bc23-6e6baf087fa5",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='input-email']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8515f991-fda4-42e7-bb47-2e9dd33226f3",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='input-email']",
+      "targets": [],
+      "value": "happydiwali@gmail.com"
+    }, {
+      "id": "a4955802-0974-4131-9d1a-639192bd6fbd",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='input-password']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac3fcf77-bcaf-409e-9845-0cdd72be4044",
+      "comment": "",
+      "command": "type",
+      "target": "//input[@id='input-password']",
+      "targets": [],
+      "value": "123456789"
+    }, {
+      "id": "c0b618a6-8c8f-44ae-a0c2-220ab8dcc040",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@id='input-newsletter-yes']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e996b336-5a56-4920-a4dd-57bef4a4f5b2",
+      "comment": "",
+      "command": "click",
+      "target": "//input[@type='checkbox']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3dc6ccbb-d05f-4513-b454-4b7a9cbd51b4",
+      "comment": "",
+      "command": "click",
+      "target": "//button[@type='submit']",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "21d11bdb-2600-4e29-92c8-f5642bf8438a",
+    "name": "BusinessFlow",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b5e64815-5dd2-4e81-861a-6303f9d65bf6", "8cb3f491-0ba3-467e-926d-0367a7b973d2"]
+  }],
+  "urls": ["https://demo.opencart.com/"],
+  "plugins": []
+}

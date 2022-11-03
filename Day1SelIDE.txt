@@ -1,0 +1,216 @@
+Selenium---Functional Regression Test Automation Open Source Tool for web based app
+Qtp/UFT(Microfocus), RFT(IBM), Silk Test(GUI based app)
+
+1. Record and Playback-Inherent feature of all automation tool
+2. Scripting(Default scripting language Java, C#, Python etc)
+
+Automation tool-Record user actions/operartions performed on AUT and Playback recorded script to compare the expected results with actual observed results
+
+Create Script->Enhacements(assertions, parameters, waits etc)->Execute script->Fails->Tweak/Refactor to meet the business goals
+
+Open source(not a commercial tool=doesn't require any license) functional regression tool for Web Based apps(limitation)
+
+A,B,C,D
+
+A+C(Bug)+D B
+
+after the bug is fixed by Dev
+
+Retesting(test the affected module)/Regression-whenever there is any change in loc to ensure that no other related module is imapcted(A+C+D)
+=====================================================================================================================Selenium Suite of products-----
+
+Selenium IDE,Selenium RC,Selenium Webdriver,Selenium Grid
+
+https://www.selenium.dev/selenium-ide/?trk=products_details_guest_secondary_call_to_action
+
+Selenium IDE(record and playback)-Runs on Firefox/Chrome/Edge as plugin for building Test Scripts/ Test Cases. The scripts are stored as reusable scripts for playback. doesnot support programming. An approach to implement Keyword Driven Framework- script is driven by generic english phrases like open,click,run,type etc. Does not provide any editor for writing codes in hll manually.Supports Java Script, which could be exported to HTML,JAVA,.NET,Ruby,Pearl,Python,C# etc
+
+Limitations---
+
+1. Does not support programming/ scripting language
+2. Does not support multiple platforms/OS
+3. Does not support multiple browsers/Cross browser Testing
+4. Does not support data driven testing
+
+Selenium RC(Remote Control)-Test created with IDE could be run on other browsers and platforms by specifying the test suite on command line by RC. Provides an API and library for each of its supported environment/ language-HTML,JAVA,C#,PHP,Ruby,Pearl,Python.
+also platform independent, same code will work on Windows OS, Linux, Mac & Solaris. 
+
+Limitations ----
+Start and Stop the server prior to your script execution.Deprecated Now.
+
+Selenium webdriver-Multiple platforms,browsers,languages.Doesnot require instantiation of any server. Supports mobile testing(Android Testing & iPhone testing ).Supports scripting/programming(java,C#,pearl,python,ruby etc)
+=====================================================================================================================
+Selenium Grid----Supports parallel cross platform,cross browser testing by running multiple tests across different browsers, operating systems, and machines in parallel. 
+Allows RC solutions to scale for test suites or test suites to be run in multiple OS, browser config with multiple instances of SRC. Does not support Test Design (Test Case creation)
+Hub-Node set up.Selenium Grid uses a hub-node concept where you only run the test on a single machine called a hub, but the execution will be done by different machines called nodes.  
+
+Hub--Load/Run your test into hub
+
+Node1-Desktop-Window with IE/Edge
+Node2-Laptop-Linux with Opera
+Node3-Tab-Mac with Safari
+Node4-SmartPhone-Android with chrome 
+
+====================================================================================================================
+Automation Framework--
+ 
+A testing framework set of guidelines or rules used for creating and designing test cases. Test plan, test strategy, Test cases/scipts, RTM, library functions, recovery scenareos,data pools etc
+
+Keyword driven-scripts designed in generic english keywords- open, click,type,close, move, select etc(Selenium IDE)
+Modular-scripts could be split into smaller independent logical units(Selenium IDE,Webdriver)
+Data driven- script should be run with different set of test data(Webdriver)
+hybrid-combination of above three- Selenium Supports a hybrid framework 
+=====================================================================================================================Selenium IDE LoC will include
+--Command(Selenese Commands)-generic english phrases like open,click,run,type etc
+--Target(Locators)-Test objects on AUT identified uniquely with locators
+--Value(Parameters)-Test data fed into the AUT
+
+Selenese commands---
+Actions-operations performed by users to manipulates the AUT/TO states, click,type,select,clickandwait, sendkeys(user for keyboard entries)
+Accessors(store/echo)-Used to fetch application generated values and store in a variable,could be further used for validation.  purpose(Store).retrieve the page title,product info,any other app attribute. Echo-To print the value/info in Selenium console log
+Assertions(validations/checkpoints)-Validate the app TO property values by comparing exp with actual result. Assertions,verfications(non conditional), Assert,verify and wait(Conditional and Non Conditional)
+
+Script is recorded by default in HTML.
+Enhanced by Assertions/verifications
+
+Assertions-compare the actual result with expected results
+---assertTextPresent
+---assertText
+---assertTitle
+---assertElementPresent
+---assertValue
+
+if an assertion fails script will be aborted
+if a verification fails script will continue
+
+
+---verifyTextPresent
+---verifyTitle
+---verifyElementPresent
+---VerifyValue
+
+
+Flight could be searched as a guest user/registered user
+
+Login---Welcome XYZ -verify ----fails 
+Search Flight (Delhi - Hyderabad)- list of available flights 
+Select Flight- choose my desired flight- assert if the fly from - Fly to city
+Book Flight- Personal payment details
+View Itenerary- flight details match with the one chosen
+Logout-
+
+
+while executing a script
+
+Two app running are
+
+AUT(web based app) and the Tool
+Tool																		AUT(web based app)
+1. Login---Welcome XYZ -verify ----fails 
+User Name																	UN
+Password																	PWD
+Ok																		OK
+Wait(recommended)-----------------------------------------------------------------Navigate to next page
+2.Search Flight (Delhi - Hyderabad)- list of available flights 
+Select Flight- choose my desired flight- assert if the fly from - Fly to city
+Fly From																	FF
+Fly To											error---FT NOt enabled
+DoF
+Book Flight- Personal payment details
+View Itenerary- flight details match with the one chosen
+Logout-
+
+Wait---For making AUT run in sync with Selenium
+
+
+
+
+Conditional-specify a condition to be satisfied(element visible,editable,present,enables) and a max timeout value-wait for element present/element visible(Selenium IDE)
+																				-Explicit wait(Selenium WD)
+Non Conditional- will not satisfy any specific condition, will hold on for a given time span(static wait)-wait(Selenium IDE)																											    -Implicit wait(Selenium WD)
+
+=====================================================================================================================
+Locators-- to identify a TO uniquely by its physical or logical description (properties)
+
+Generic(basic/Primary Properties)-ID,Name,link Text,Class name, partiallinktext
+CSS Selectors-Tag&ID(#),Tag&attribute(=),Tag&Class(.),TagClassAttribute
+tag.class[attibute=value]
+DOM(document Object Model)-GetElementById,GetElementByName, dom:name,dom:index
+Xpath-Query language for navigating through xml document to locate GUI(web) elements(addressing technique)
+
+Absolute(/)-Xpath engine will start searching for element from root node in xml doc
+Relative(//)-search for matching element anywhere in xml document
+
+Hyderabad-Hitec City-Offc--Madhapur(relative add)---Complete add of his stay in Phillipines(area-city-country----Absolute add)
+		-Madhavpur-Stay
+         -Phillipines
+=====================================================================================================================
+Debugging Tools
+Break point-lets you pause test execution at the step where added.Toggle button. Lets interact with the app and the script during run time
+Play to this point- You may execute steps till a certain point in the script
+Record from here- lets you proceed with recording from a certain step 
+=====================================================================================================================
+
+Exercise:
+
+1.AutomationPractice-http://automationpractice.com/index.php
+2.Register-Verify Logo
+3.Login-Vaidate user Name,Page Title
+4.Search Product-Validate Page Title,Fetch product description,price, discount and print in console 
+5.Select your preferences-display the preferences
+6.Add to Cart-Verify confirmation message
+7.Proceed to checkout-Validate Page Title,qty to be editable,product is in stock
+8.LogOut-verify
+
+Add wait wherever required.
+
+Register-----------
+Validate Page Title
+Populate all fields
+Register
+
+Login-----------------
+Enter credentials for login
+Validate user name 
+
+
+PHPTravels Business Flow
+
+Test-FlightSearch
+
+1.Launch app
+2.Flights
+	One Way-
+	Fly From
+	Fly To
+	Departures Date
+	Class
+	Passenger#
+	Search
+3. Verify/assert Page Title
+4. Verify/Assert Flight Search details-CCU-JAI/DoF
+5. Add Filters-Flight/Airlines
+
+
+Automation Practice
+
+1. Launch App
+2. Validate Title
+3. Search Product
+4. Select Product, Title check
+5. Validate the product name, if preferred color is available
+6. Select Size and color 
+7. Fetch product description,price, discount and print in console 
+8. Add to Cart-Verify confirmation message
+9. Proceed to checkout-Validate Page Title,qty to be editable,Update qty
+10. Validate if product is in stock
+
+
+
+
+
+
+https://demo.opencart.com
+
+
+
